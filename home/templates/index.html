@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home Page - OkNguyen{% endblock title %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/Home.css' %}" media="screen">{% endblock css %}
+{% block body %}
+<section class="u-align-left u-clearfix u-image u-section-1" id="carousel_2a21">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h5 class="u-text u-text-body-alt-color u-text-1"> technologY</h5>
+        <h1 class="u-text u-text-body-alt-color u-text-2"> License Plate Recognition </h1>
+    </div>
+</section>
+<section class="u-clearfix u-section-2" id="carousel_e555">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+                <div class="u-layout-row">
+                    <div class="u-container-style u-layout-cell u-left-cell u-size-35-md u-size-35-sm u-size-35-xs u-size-39-lg u-size-39-xl u-layout-cell-1">
+                        <div class="u-container-layout u-valign-middle u-container-layout-1">
+                            <div class="u-align-left u-black u-expanded-height u-shape u-shape-1"></div>
+                            <img class="u-expanded-width u-image u-image-1" src="{% static 'images/image-8.webp' %}" data-image-width="489" data-image-height="400">
+                        </div>
+                    </div>
+                    <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-21-lg u-size-21-xl u-size-25-md u-size-25-sm u-size-25-xs u-layout-cell-2">
+                        <div class="u-container-layout u-container-layout-2">
+                            <div class="u-border-9 u-border-black u-line u-line-horizontal u-line-1"></div>
+                            <h2 class="u-text u-text-1">Ứng dụng</h2>
+                            <h5 class="u-text u-text-2"> KNN là gì?</h5>
+                            <p class="u-text u-text-3">Là một trong những thuật toán học có giám sát đơn giản nhất được sử dụng nhiều trong khai phá dữ liệu và học máy.<br>
+                                <br>Ý tưởng của thuật toán này là nó không học một điều gì từ tập dữ liệu học (nên KNN được xếp vào loại lazy learning), mọi tính toán được thực hiện khi nó cần dự đoán nhãn của dữ liệu mới.<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-section-5" id="carousel_d15d">
+    <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-xl u-sheet-1">
+        <h2 class="u-align-center u-text u-text-palette-2-base u-text-1">Ý tưởng của KNN</h2>
+        <p>Thuật toán KNN cho rằng những dữ liệu tương tự nhau sẽ tồn tại gần nhau trong một không gian, từ đó công việc của chúng ta là sẽ tìm k điểm gần với dữ liệu cần kiểm tra nhất. Việc tìm khoảng cách giữa 2 điểm củng có nhiều công thức có thể
+            sử dụng, tùy trường hợp mà chúng ta lựa chọn cho phù hợp. Đây là 3 cách cơ bản để tính khoảng cách 2 điểm dữ liệu x, y có k thuộc tính:</p>
+        <div class="u-clearfix u-gutter-30 u-layout-wrap u-layout-wrap-1">
+            <div class="u-gutter-0 u-layout">
+                <div class="u-layout-row" style="display: flex; align-items: center; justify-content: center;">
+                    <div class="u-container-style u-layout-cell u-left-cell u-size-18 u-size-60-md u-white u-layout-cell-1">
+                        <div class="u-container-layout u-container-layout-1">
+                            <img class="u-expanded-width-lg u-expanded-width-xl u-image u-image-1" src="{% static 'images/Screenshot 2023-04-05 214101.png' %}">
+                            <h5 class="u-text">EUCLIDEAN</h5>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-18 u-size-60-md u-white u-layout-cell-2">
+                        <div class="u-container-layout u-container-layout-2">
+                            <img class="u-expanded-width-lg u-expanded-width-xl u-image u-image-2" src="{% static 'images/Screenshot 2023-04-05 214132.png' %}">
+                            <h5 class="u-text">MANHATTAN</h5>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-18 u-size-60-md u-white u-layout-cell-3">
+                        <div class="u-container-layout u-container-layout-3">
+                            <img class="u-expanded-width-lg u-expanded-width-xl u-image u-image-3" src="{% static 'images/Screenshot 2023-04-05 214509.png' %}">
+                            <h5 class="u-text">MINKOWSKI</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-black u-clearfix u-section-4" id="carousel_85a3">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-56 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+                <div class="u-layout-row">
+                    <div class="u-size-30 u-size-60-md">
+                        <div class="u-layout-col">
+                            <div class="u-container-style u-layout-cell u-left-cell u-size-40 u-layout-cell-1">
+                                <div class="u-container-layout u-container-layout-1">
+                                    <div class="u-palette-2-base u-shape u-shape-rectangle u-shape-1"></div>
+                                    <img class="u-image u-image-1" src="{% static 'images/Logo.png' %}">
+                                </div>
+                            </div>
+                            <div class="u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-2">
+                                <div class="u-container-layout u-container-layout-2">
+                                    <h5 class="u-text u-text-1">HTML, CSS, JAVASCRIPT</h5>
+                                    <p class="u-text u-text-2">
+                                        HTML là tên viết tắt của HyperText Markup Language. Trong chương trình của môn tin học thuộc trung học phổ thông, HTML được giới thiệu là ngôn ngữ đánh dấu siêu văn bản. Và thay vì sử dụng ngôn ngữ lập trình để thực hiện các chức năng, HTML sử dụng các
+                                        thẻ để xác định các loại nội dung khác nhau và mục đích phục vụ cho trang web. HTML là ngôn ngữ được sử dụng cho các tài liệu website. HTML không phải là một ngôn ngữ lập trình. HTML giống như một ngôn ngữ đánh
+                                        dấu có vai trò xác định đâu là ý nghĩa, mục đích và cấu trúc của một tài liệu. Cùng với CSS và JavaScript, HTML kết hợp tạo nên bộ ba nền tảng kỹ thuật cho hoạt động của website.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-size-30 u-size-60-md">
+                        <div class="u-layout-col">
+                            <div class="u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-3">
+                                <div class="u-container-layout u-container-layout-3">
+                                    <h5 class="u-text u-text-3">PYTHON</h5>
+                                    <h2 class="u-text u-text-palette-2-base u-text-4">LẬP TRÌNH THUẬT TOÁN KNN</h2>
+                                    <p class="u-text u-text-default u-text-5">
+                                        Python là một ngôn ngữ lập trình được sử dụng rộng rãi trong các ứng dụng web, phát triển phần mềm, khoa học dữ liệu và máy học (ML). Các nhà phát triển sử dụng Python vì nó hiệu quả, dễ học và có thể chạy trên nhiều nền tảng khác nhau. Phần mềm Python
+                                        được tải xuống miễn phí, tích hợp tốt với tất cả các loại hệ thống và tăng tốc độ phát triển.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-container-style u-image u-layout-cell u-right-cell u-size-40 u-image-2">
+                                <div class="u-container-layout u-container-layout-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-section-5" id="carousel_d15d">
+    <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-xl u-sheet-1">
+        <h2 class="u-align-center u-text u-text-palette-2-base u-text-1">Thư Viện Hỗ trợ</h2>
+        <div class="u-clearfix u-gutter-30 u-layout-wrap u-layout-wrap-1">
+            <div class="u-gutter-0 u-layout">
+                <div class="u-layout-row">
+                    <div class="u-container-style u-layout-cell u-left-cell u-size-12 u-size-60-md u-white u-layout-cell-1">
+                        <div class="u-container-layout u-container-layout-1">
+                            <img class="u-expanded-width-lg u-expanded-width-xl u-image u-image-1" src="{% static 'images/download.png' %}">
+                            <div style="display: flex; justify-content: center;">
+                                <h5 class="u-text">numpy</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-12 u-size-60-md u-white u-layout-cell-2">
+                        <div class="u-container-layout u-container-layout-2">
+                            <img class="u-expanded-width-lg u-expanded-width-xl u-image u-image-2" src="{% static 'images/download (1).png' %}">
+                            <div style="display: flex; justify-content: center;">
+                                <h5 class="u-text">opencv</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-12 u-size-60-md u-white u-layout-cell-3">
+                        <div class="u-container-layout u-container-layout-3">
+                            <img class="u-expanded-width-lg u-expanded-width-xl u-image u-image-3" src="{% static 'images/Untitled-32.png' %}">
+                            <div style="display: flex; justify-content: center;">
+                                <h5 class="u-text">django</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-12 u-size-60-md u-white u-layout-cell-4">
+                        <div class="u-container-layout u-container-layout-4">
+                            <img class="u-expanded-width-lg u-expanded-width-xl u-image u-image-4" src="{% static 'images/download.jpg' %}">
+                            <div style="display: flex; justify-content: center;">
+                                <h5 class="u-text">pillow&nbsp;<br>
+                            </div>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-right-cell u-size-12 u-size-60-md u-white u-layout-cell-5">
+                        <div class="u-container-layout u-container-layout-5">
+                            <img class="u-expanded-width-lg u-expanded-width-xl u-image u-image-5" src="{% static 'images/logo_python-math.png' %}">
+                            <div style="display: flex; justify-content: center;">
+                                <h5 class="u-text">math</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}

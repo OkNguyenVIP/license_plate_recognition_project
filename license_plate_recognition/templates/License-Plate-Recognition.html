@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}License Plate Recognition - OkNguyen{% endblock title %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/License-Plate-Recognition.css' %}" media="screen">{% endblock css %}
+{% block javascript %}<script class="u-script" type="text/javascript" src="{% static 'javascript/qrcode.min.js' %}"></script>{% endblock javascript %}
+{% block body %}
+<section class="u-clearfix u-palette-2-base u-section-1" id="carousel_557c">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <div
+      class="u-expanded-width-sm u-expanded-width-xs u-opacity u-opacity-55 u-shape u-shape-svg u-text-palette-2-light-1 u-shape-1">
+      <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2739"></use>
+      </svg>
+      <svg class="u-svg-content" viewBox="0 0 160 160" x="0px" y="0px" id="svg-2739"
+        style="enable-background:new 0 0 160 160;">
+        <path d="M151.7,132.5c-3.4,6-7.9,11.7-13.3,16.5c-29.2,26.1-54.1-2.3-88.2-3S0,109.5,0,91.6s14.8-31.3,25.3-45.3S33.4,11,51.8,3
+	c15.3-6.6,33.6-0.4,51.6,0.7c11.2,0.7,28.8-3.8,38.2,0.4s11.8,15.4,9.2,22.8c-1.9,5.4-5.5,11.6-12.8,16.5
+	c-9.3,10.1-4.7,22.9,3.7,33.4c7.8,9.7,17.7,11.7,18.3,23.5C160.4,110.8,157.6,122.2,151.7,132.5L151.7,132.5z"></path>
+      </svg>
+    </div>
+    <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+      <div class="u-gutter-0 u-layout">
+        <div class="u-layout-row">
+          <div class="u-size-25-sm u-size-25-xs u-size-42-lg u-size-42-xl u-size-60-md">
+            <div class="u-layout-col">
+              <div
+                class="u-align-left u-container-align-center u-container-style u-image u-layout-cell u-size-60 u-image-1"
+                data-image-width="1280" data-image-height="842">
+                <img width="100%" src="{% url 'video_feed' %}"/>
+                <div
+                  class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-container-layout-1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="u-size-18-lg u-size-18-xl u-size-35-sm u-size-35-xs u-size-60-md">
+            <div class="u-layout-col">
+              <div class="u-size-40">
+                <div class="u-layout-row">
+                  <div style="padding-top: 20%;" class="u-align-left u-container-style u-image u-layout-cell u-size-60 u-image-2"
+                    data-image-width="1980"% data-image-height="1114" width="100%" id="qrcode">
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-20">
+                <div class="u-layout-row">
+                  <div
+                    class="u-align-left u-container-style u-layout-cell u-palette-2-light-1 u-size-60 u-layout-cell-3">
+                    <div class="u-container-layout u-valign-middle u-container-layout-3">
+                      <p class="u-text u-text-1">License plate:&nbsp;</p>
+                      <h3 class="u-text u-text-2" id="license-plate"></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  img {
+    width: 100%;
+    height: -webkit-fill-available;
+  }
+</style>
+<script>
+  var qrcode = new QRCode("qrcode");
+  
+  function license_plate() {
+      $.ajax({
+          url: "{% url 'stream_data' %}",
+          type: 'GET',
+          success: function(data) {
+              $("#license-plate").html(data.License);
+              qrcode.makeCode(data.License);
+          }
+      });
+  }
+
+  setInterval(license_plate, 1000);
+</script>
+{% endblock body %}
